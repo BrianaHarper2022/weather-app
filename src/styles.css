@@ -19,7 +19,6 @@ body {
     border-radius: 8px;
     font-size: 15px;
     width: 75%
-    
 }
 
 .search-button {
@@ -89,8 +88,7 @@ strong {
     font-size: 30px;
     position: relative;
     top: -36px;
-    margin-top: 6px;
-    
+    margin-top: 6px; 
 }
 
 footer {
