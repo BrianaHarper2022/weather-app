@@ -1,5 +1,3 @@
-
-
 function searchCity(city) {
 let apiKey = "a94b5f688aoee508a9b7fca6t23274ef";
 let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&unit=metric`;
@@ -49,7 +47,6 @@ function formatDate(date) {
     return`${day} ${hours}:${minutes}`;
 
 }
-
 
 function handleSearchSubmit(event) {
     event.preventDefault();

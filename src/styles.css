@@ -69,20 +69,20 @@ strong {
 }
 
 .current-temperature-container {
-    display: block;
-    
+    position: relative;
 }
 .current-temperature-icon {
     width: 88px;
     height: 88px;
-    
+    position: absolute;
+    top: 0;
+    left: -79px;
 }
 
 .current-temperature-value {
     font-size: 88px;
     line-height: 88px;
     font-weight: bold;
-
 }
 
 .current-temperature-degree {
