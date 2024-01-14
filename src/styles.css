@@ -68,19 +68,19 @@ strong {
     color: #F65282;
 }
 
-.current-temperature {
+.current-temperature-container {
     display: block;
     
 }
-.current-temperature-emoji {
-    position: relative;
-    font-size: 40px;
-    top: -8px;
-    margin-right: 12px;
+.current-temperature-icon {
+    width: 88px;
+    height: 88px;
+    
 }
 
 .current-temperature-value {
-    font-size: 80px;
+    font-size: 88px;
+    line-height: 88px;
     font-weight: bold;
 
 }
@@ -89,6 +89,7 @@ strong {
     font-size: 30px;
     position: relative;
     top: -36px;
+    margin-top: 6px;
     
 }
 
