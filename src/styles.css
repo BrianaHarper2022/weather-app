@@ -101,6 +101,9 @@ footer {
 .forecast {
     margin-top: 20px;
     text-align: center; 
+    display: flex;
+    justify-content: space-around;
+
 }
 
 .forecast-date {

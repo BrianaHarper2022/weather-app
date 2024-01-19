@@ -54,7 +54,38 @@ function handleSearchSubmit(event) {
     searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+    <div class="forecast">
+        <div class="row">
+            <div class="col-2">
+            <div class="forecast-date">
+            ${day}
+            </div>
+            <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt="" width="42" />
+            </div>
+            <div class="forecast-temperatures">
+            <span class="forecast-temperatures-max">18°</span>
+            <span class="forecast-temperatures-min">12°</span>
+            </div>
+        </div>
+        </div>
+    `;
+  });
+
+  forecastElement.innerHTML = forecastHtml;
+}
+
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Charlotte");
+displayForecast();
