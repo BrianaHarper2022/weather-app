@@ -23,6 +23,7 @@ function refreshWeather(response) {
     timeElement.innerHTML = formatDate(date);
     iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-temperature-icon" />`;
 
+    getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -54,7 +55,13 @@ function handleSearchSubmit(event) {
     searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "a94b5f688aoee508a9b7fca6t23274ef";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   let forecastHtml = "";
@@ -88,4 +95,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Charlotte");
-displayForecast();
