@@ -101,11 +101,10 @@ footer {
 }
 
 .forecast {
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center; 
     display: flex;
     justify-content: space-around;
-
 }
 
 .forecast-date {
